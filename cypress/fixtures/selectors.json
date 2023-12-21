@@ -1,0 +1,19 @@
+{
+  "title": ".page-header__title",
+  "days": ".page-nav__day",
+  "adminText": ".page-header__subtitle",
+  "hallsControl": ".conf-step__title",
+  "zver": "[data-film-id='118'] > .conf-step__movie-title",
+  "unesVetr": "[data-film-id='119'] > .conf-step__movie-title",
+  "th": "data-time-stamp='1703106000'",
+  "fr": "[data-time-stamp='1703192400']",
+  "st": "data-time-stamp='1703278800'",
+  "sn": "data-time-stamp='1703365200'",
+  "mn": "data-time-stamp='1703451600'",
+  "tu": "data-time-stamp='1703538000'",
+  "wn": "data-time-stamp='1703624400'",
+  "firstMovieTitle": ":nth-child(1) > .movie__info > .movie__description > .movie__title",
+  "secondMovieTitle": ":nth-child(2) > .movie__info > .movie__description > .movie__title",
+  "seanceTime": ".movie-seances__time",
+  "accept": ".acceptin-button"
+}
