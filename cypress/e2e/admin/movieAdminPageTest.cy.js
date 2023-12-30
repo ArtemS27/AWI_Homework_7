@@ -1,5 +1,5 @@
-import admin from "../fixtures/admin.json";
-import sel from "../fixtures/selectors.json";
+import admin from "../../fixtures/admin.json";
+import sel from "../../fixtures/selectors.json";
 
 describe("Movie administration page test", () => {
   beforeEach(() => {
@@ -28,11 +28,11 @@ describe("Movie administration page test", () => {
       .then((text) => {
         console.log(text);
         cy.visit("https://qamid.tmweb.ru");
-        cy.get(sel.fr).click();
+        cy.get(sel.sn).click();
         cy.get(sel.firstMovieTitle).should("have.text", text);
       });
     cy.get(sel.seanceTime).contains("00:00").click();
-    const seats = require("../fixtures/seats.json");
+    const seats = require("../../fixtures/seats.json");
     seats.forEach((seat) => {
       cy.get(
         `.buying-scheme__wrapper > :nth-child(${seat.row}) > :nth-child(${seat.seat})`

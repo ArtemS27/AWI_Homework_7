@@ -4,11 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:admin:chrome": "npx cypress run --record --group admin --spec \"cypress/e2e/admin/movieAdminPageTest.cy.js\" --browser chrome",
+    "test:user:chrome": "npx cypress run --record --group user --spec \"cypress/e2e/user/moviePageTest.cy.js\" --browser chrome",
+    "test:parallel:chrome": "run-p -c test:admin:chrome test:user:chrome",
+    "test:admin:electron": "npx cypress run --record --group admin --spec \"cypress/e2e/admin/movieAdminPageTest.cy.js\" --browser elecron",
+    "test:user:electron": "npx cypress run --record --group user --spec \"cypress/e2e/user/moviePageTest.cy.js\" --browser elecron",
+    "test:parallel:elecron": "run-p -c test:admin:elecron test:user:elecron",
+    "test:admin:msedge": "npx cypress run --record --group admin --spec \"cypress/e2e/admin/movieAdminPageTest.cy.js\" --browser \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\"",
+    "test:user:msedge": "npx cypress run --record --group user --spec \"cypress/e2e/user/moviePageTest.cy.js\" --browser \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\"",
+    "test:parallel:msedge": "run-p -c test:admin:msedge test:user:msedge",
+    "test:parallel:chrome_electron": "run-p -c test:admin:chrome test:user:electron",
+    "test:parallel:chrome_msedge": "run-p -c test:admin:chrome test:user:msedge",
+    "test:parallel:electron_msedge": "run-p -c test:admin:electron test:user:msedge",
+    "test:parallel:electron_chrome": "run-p -c test:admin:electron test:user:chrome",
+    "test:parallel:msedge_chrome": "run-p -c test:admin:msedge test:user:chrome",
+    "test:parallel:msedge_electron": "run-p -c test:admin:msedge test:user:electron",
+    "test:admin": "npx cypress run --record --group admin --spec \"cypress/e2e/admin/**/*\"",
+    "test:user": "npx cypress run --record --group admin --spec \"cypress/e2e/user/**/*\"",
+    "test:parallel:both_folders": "run-p -c test:admin test:user"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.6.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }

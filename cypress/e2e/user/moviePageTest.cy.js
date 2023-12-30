@@ -1,4 +1,4 @@
-import sel from "../fixtures/selectors.json";
+import sel from "../../fixtures/selectors.json";
 
 describe("Movie page correct display", () => {
   beforeEach(() => {
