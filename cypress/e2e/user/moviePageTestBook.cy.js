@@ -7,7 +7,7 @@ describe("Movie page book a seat", () => {
   
     it("Should book a seat", () => {
       cy.get(sel.title).should("be.visible");
-      cy.get(sel.sn).click();
+      cy.get(sel.tu).click();
       cy.get(sel.seanceTime).contains("00:00").click();
       const seats = require("../../fixtures/seats.json");
     seats.forEach((seat) => {

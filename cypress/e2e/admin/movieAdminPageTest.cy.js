@@ -28,7 +28,7 @@ describe("Movie administration page test", () => {
       .then((text) => {
         console.log(text);
         cy.visit("https://qamid.tmweb.ru");
-        cy.get(sel.sn).click();
+        cy.get(sel.tu).click();
         cy.get(sel.firstMovieTitle).should("have.text", text);
       });
     cy.get(sel.seanceTime).contains("00:00").click();

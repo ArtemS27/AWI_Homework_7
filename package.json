@@ -20,7 +20,7 @@
     "test:parallel:msedge_chrome": "run-p -c test:admin:msedge test:user:chrome",
     "test:parallel:msedge_electron": "run-p -c test:admin:msedge test:user:electron",
     "test:admin": "npx cypress run --record --group admin --spec \"cypress/e2e/admin/**/*\"",
-    "test:user": "npx cypress run --record --group admin --spec \"cypress/e2e/user/**/*\"",
+    "test:user": "npx cypress run --record --group user --spec \"cypress/e2e/user/**/*\"",
     "test:parallel:both_folders": "run-p -c test:admin test:user"
   },
   "author": "",
